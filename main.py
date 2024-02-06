@@ -194,8 +194,9 @@ def main():
     parser.add_argument(
         "-c",
         "--conf",
-        action="store_const",
+        action="store",
         help="Location of ini config file to use",
+        required=False,
     )
     args = parser.parse_args()
 
