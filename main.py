@@ -172,12 +172,7 @@ def get_local_ip() -> str:
     ).decode()
     local_ip = re.search(r"inet ((\d{1,3}\.){3}[^/]+)", got).groups()[0]
     net_ip = request.urlopen(HTTP_IP_SOURCE).read().decode()
-
-    if local_ip != net_ip:
-        print(mismatch := f"IP mismatch: {local_ip} vs. {net_ip}")
-        send_notification(mismatch)
-
-    return local_ip
+    return net_ip
 
 
 def get_domain_data(domain: str):
