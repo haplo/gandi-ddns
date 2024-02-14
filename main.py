@@ -176,7 +176,7 @@ def get_local_ip() -> str:
 
 
 def get_domain_data(domain: str):
-    return gandi_req(f"https://dns.api.gandi.net/api/v5/domains/{domain}")
+    return gandi_req(f"https://dns.api.gandi.net/api/v5/domain/domains/{domain}")
 
 
 def print_records(domain: str):
